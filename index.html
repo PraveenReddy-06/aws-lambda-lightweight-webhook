@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightweight Webhook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="eyebrow">AWS SERVERLESS WEBHOOK</p>
+    <h1>Lightweight Webhook Console</h1>
+    <p class="subtitle">Send a test event directly to an AWS Lambda Function URL.</p>
+
+    <section class="panel">
+      <label>Function URL
+        <input id="url" value="https://6agmmwkz3qztsxp53276wwtcfy0qxkom.lambda-url.us-east-1.on.aws/">
+      </label>
+
+      <label>Webhook Secret
+        <input id="secret" type="password" value="demo-secret">
+      </label>
+
+      <label>Event Type
+        <select id="eventType">
+          <option>PROJECT_CREATED</option>
+          <option>PROJECT_APPROVED</option>
+          <option>PROJECT_UPDATED</option>
+        </select>
+      </label>
+
+      <label>Project Name
+        <input id="projectName" value="AI Attendance System">
+      </label>
+
+      <button id="send">Send Webhook</button>
+    </section>
+
+    <section class="result">
+      <div class="result-head">
+        <span>Response</span>
+        <span id="status">Ready</span>
+      </div>
+      <pre id="output">No request sent yet.</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
