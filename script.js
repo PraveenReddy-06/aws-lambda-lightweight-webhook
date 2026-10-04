@@ -37,9 +37,7 @@ $("send").addEventListener("click", async () => {
   } catch (error) {
     $("status").textContent = "Request failed";
     $("output").textContent =
-      "Browser request failed. Check Function URL CORS configuration.
-
-" +
+      "Browser request failed. Check Function URL CORS configuration.\n\n" +
       error.message;
   }
 });
